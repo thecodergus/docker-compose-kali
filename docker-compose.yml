@@ -15,6 +15,7 @@ services:
       - seccomp:unconfined
     privileged: true
     pid: "host"
+    userns_mode: "host"
     network_mode: "host"
     deploy:
       resources:
