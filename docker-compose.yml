@@ -5,8 +5,8 @@ services:
     build: 
       context: .
       dockerfile: docker/kali.dockerfile
-    networks:
-      - local
+    # networks:
+    #   - local
     cap_add:
       - NET_ADMIN
       - SYS_ADMIN
