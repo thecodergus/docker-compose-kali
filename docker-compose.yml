@@ -2,8 +2,9 @@ version: '3.9'
 
 services:
   kali:
-    image: kalilinux/kali-rolling:latest
-    entrypoint: tail -f /dev/null
+    build: 
+      context: .
+      dockerfile: docker/kali.dockerfile
     networks:
       - local
     cap_add:
