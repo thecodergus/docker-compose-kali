@@ -6,6 +6,11 @@ services:
     entrypoint: tail -f /dev/null
     networks:
       - local
+    cap_add:
+      - NET_ADMIN
+      - SYS_ADMIN
+    security_opt:
+      - seccomp:unconfined
     privileged: true
     deploy:
       resources:
